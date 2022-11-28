@@ -16,7 +16,8 @@ A series of (half finished) sample repositories with documentation
  - [Simple-Samples](https://github.com/simple-samples)
 
 ## Project Specs:
- - [Project 1](https://github.com/220718-Java-Angular-AWS/P1-Spec/blob/main/README.md) - Solo, basic full stack application
- - [Project 2](https://github.com/220718-Java-Angular-AWS/P2-Spec/blob/main/README.md) - Medium group, advanced full stack application with devops
+ - Project 0 - Console Rock Paper Scissors
+ - Project 1 - Solo, basic full stack application
+ - Project 2 - Medium group, advanced full stack application with devops
  - Project 3 - Full group, full stack applicaiton dictated by CoE stakeholders
 
