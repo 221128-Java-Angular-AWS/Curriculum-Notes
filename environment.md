@@ -14,8 +14,8 @@ Below are the applications we will be using in this course. These are all availa
  - [Git Bash](https://git-scm.com/downloads) - Git command line tool
  - [IntelliJ Community](https://www.jetbrains.com/idea/download/#section=windows) - Java IDE
  - [Apache Maven](https://maven.apache.org/download.cgi)
-  - [Adding to PATH in Windows](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
-  - [Adding to PATH in OSX](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/)
+   - [Adding to PATH in Windows](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
+   - [Adding to PATH in OSX](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/)
  - [VSCode](https://code.visualstudio.com/download) - Text editor with extensions
  - [DBeaver](https://dbeaver.io/download/) - SQL database administration suite
  - [Postman](https://www.postman.com/downloads/) - API design/testing tool
