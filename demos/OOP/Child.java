@@ -1,14 +1,23 @@
-public class Child extends Parent{
+/*
+This class extends the Parent class. This is the most basic form of inheritance in Java.
+This means that the child class has all the same data and behaviors (fields and methods) of the parent
+class. We inherited these.
+ */
 
-    //this method is inherited and then overloaded.
+public class Child extends Parent {
+    //this method is inherited and then overridden
     public int multiply(int a, int b) {
         System.out.println("Child override of multiply method");
         return a * b;
     }
 
 
-    //Overriding:
-
+    /*
+    Overloading - here we have several methods with the same symbol (the same name). They are
+    differentiated by the parameter lists. The first add() method has 2 parameters. The next has 3,
+    and the last one can have any number of parameters. When we invoke an add() method by name, the
+    JVM chooses an appropriate overload based on the parameters we send.
+     */
     public int add(int a, int b) {
         System.out.println("2 parameter method invoked");
         return a + b;

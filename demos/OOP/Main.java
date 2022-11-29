@@ -5,7 +5,7 @@ public class Main {
 
         System.out.println("parent product 2x2 = " + product);
 
-        Parent c = new Child();
+        Parent c = new Child(); //sub-type polymorphism, see below
         product = c.multiply(2, 2);
 
         System.out.println("child product 2x2 = " + product);
@@ -14,7 +14,7 @@ public class Main {
 
         /*
         note how this is a reference to type Parent, but the object itself is of type Child.
-        parent is a class, child is its subclass, as Child extends Parent
+        parent is a class, child is its subclass, as Child extends Parent.
         This is called sub-type polymorphism. Note that we can also store it in a reference of type Object,
         this is because implicitly all objects inherit from the Object class
          */
@@ -23,25 +23,6 @@ public class Main {
         Object c3 = new Child();
 
         System.out.println(c1.add(1,2,3,4,5,6,7,8,9));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
