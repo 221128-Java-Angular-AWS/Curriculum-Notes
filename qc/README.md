@@ -2,8 +2,11 @@
 These files are full of questions you are likely to be asked as part of QC. You should focus your QC studies on these, but know that you may get asked questions that you didn't see here. If you see something in these files that you don't think was covered in training, please let your trainer know. 
 
 
-### QC Questions
-You can focus your study here, but these are not exhaustive lists of all possible questions.
+### Current topics
+ - [OOP](./oop.md)
+ - [Java Basics](./java-basics.md)
+ - [Software Development Lifecycle](./qc-sdlc.md)
+
 ### Backend:
  - [OOP](./oop.md)
  - [Java Basics](./java-basics.md)
