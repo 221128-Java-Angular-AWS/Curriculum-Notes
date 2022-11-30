@@ -12,6 +12,8 @@ public class Main {
         int b = 5;
         int c = 10;
 
+
+
         //Branching:
         if(a < b) {
             System.out.println("This happens!");
@@ -89,6 +91,8 @@ public class Main {
 
 
 
+        //Methods - Jumps
+        //TODO: Add notes about invoking methods here
 
 
     }
