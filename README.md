@@ -16,7 +16,7 @@ A series of (half finished) sample repositories with documentation
  - [Simple-Samples](https://github.com/simple-samples)
 
 ## Project Specs:
- - Project 1 - Solo, basic full stack application
+ - [Project 1](./P1.MD) - Solo, basic full stack application
  - Project 2 - Medium group, advanced full stack application with devops
  - Project 3 - Full group, full stack applicaiton dictated by CoE stakeholders
 
