@@ -10,5 +10,12 @@ public class Main {
         for(int i = 0; i < mySimpleList.length(); i++) {
             System.out.println(mySimpleList.get(i));
         }
+
+        for(String s : mySimpleList) {
+            System.out.println(s);
+        }
+
+
+
     }
 }

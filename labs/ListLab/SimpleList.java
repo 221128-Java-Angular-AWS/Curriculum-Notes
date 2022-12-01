@@ -1,4 +1,6 @@
-public interface SimpleList<E> {
+import java.io.Serializable;
+
+public interface SimpleList<E> extends Iterable<E> {
     /*
     add
     add at index

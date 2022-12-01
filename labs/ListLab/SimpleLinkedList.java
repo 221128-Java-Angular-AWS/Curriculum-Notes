@@ -1,9 +1,11 @@
+import java.util.Iterator;
+
 public class SimpleLinkedList<E> implements SimpleList<E>{
     private Node<E> HEAD;
 
     //constructor
     public SimpleLinkedList() {
-
+        HEAD = null;
     }
 
     @Override
@@ -41,6 +43,29 @@ public class SimpleLinkedList<E> implements SimpleList<E>{
     @Override
     public int length() {
         return 0;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return new Iterator<E>() {
+            Node<E> currentNode = HEAD;
+
+            @Override
+            public boolean hasNext() {
+                //is there a reference from this node to the next, or is the reference null?
+                if(currentNode != null) {
+                    return true;
+                }
+                return false;
+            }
+
+            @Override
+            public E next() {
+                E e = currentNode.e;
+                currentNode = currentNode.next;
+                return e;
+            }
+        };
     }
 
 

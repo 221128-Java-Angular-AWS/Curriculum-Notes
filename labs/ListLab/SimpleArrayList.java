@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public class SimpleArrayList<E> implements SimpleList<E>{
     private int BASE_SIZE = 4;
     private int MAX_SIZE;
@@ -129,4 +131,23 @@ public class SimpleArrayList<E> implements SimpleList<E>{
     }
 
 
+    @Override
+    public Iterator<E> iterator() {
+        return new Iterator<E>() {
+            private int i = 0;
+            @Override
+            public boolean hasNext() {
+                if(i < cursor) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            @Override
+            public E next() {
+                return (E)array[i++];
+            }
+        };
+    }
 }
