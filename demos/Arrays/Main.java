@@ -13,5 +13,7 @@ public class Main {
         char[] array2 = new char[]{'H', 'E', 'L', 'L', 'O'};
 
 
+
+
     }
 }
