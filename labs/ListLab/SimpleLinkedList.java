@@ -22,9 +22,8 @@ public class SimpleLinkedList<E> implements SimpleList<E>{
     }
 
     @Override
-    public E remove(int index) {
+    public void remove(int index) {
         //remove an element from a specified position, splicing it out
-        return null;
     }
 
     @Override
@@ -39,10 +38,14 @@ public class SimpleLinkedList<E> implements SimpleList<E>{
         return 0;
     }
 
+    @Override
+    public int length() {
+        return 0;
+    }
 
 
     private class Node<E> {
-        Object o;
+        E e;
         Node<E> next;
     }
 }

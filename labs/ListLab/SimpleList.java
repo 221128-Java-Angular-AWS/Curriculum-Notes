@@ -9,9 +9,10 @@ public interface SimpleList<E> {
      */
 
     void add(E e);
-    void add(int index, E e);
+    void add(int index, E e) throws IndexOutOfBoundsException;
     void clear();
-    E remove(int index);
-    E get(int index);
+    void remove(int index) throws IndexOutOfBoundsException;
+    E get(int index) throws IndexOutOfBoundsException;
     int contains(E e);
+    int length();
 }
