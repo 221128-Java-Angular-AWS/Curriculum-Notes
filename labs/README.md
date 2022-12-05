@@ -1,4 +1,4 @@
 # Labs
 
-[SimpleList Implementation](./ListLab/)
-[SQL Lab](./sql-lab/)
+ - [SimpleList Implementation](./ListLab/)
+ - [SQL Lab](./sql-lab/)
