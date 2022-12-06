@@ -1,5 +1,3 @@
 # Code Demos
 
- - [Hello World](./Hello%20World/)
- - [OOP](./OOP/)
- - [Strings and Primitives](./Strings%20and%20Primitives/)
+Just click through the repository to see the demos folder (should be the directory you are in now). There are numerous demo projects here from our training sessions.
