@@ -3,9 +3,7 @@ These files are full of questions you are likely to be asked as part of QC. You 
 
 
 ### Current topics
- - [OOP](./oop.md)
- - [Java Basics](./java-basics.md)
- - [Software Development Lifecycle](./qc-sdlc.md)
+- [SQL](./qc-sql.md)
 
 ### Backend:
  - [OOP](./oop.md)
