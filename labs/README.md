@@ -1,4 +1,2 @@
 # Labs
-
- - [SimpleList Implementation](./ListLab/)
- - [SQL Lab](./sql-assignment/sql-assignment(postgresql).sql)
+Look into the labs in this directory. I won;t be mantaining links in this file anymore.
