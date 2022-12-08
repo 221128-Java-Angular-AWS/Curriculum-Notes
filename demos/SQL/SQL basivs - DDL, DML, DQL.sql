@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS artists (
  * something in another table, that referenced entry must already exist.
  * 
  */
-CREATE TABLE IF NOT EXISTS songs(
+CREATE TABLE IF NOT EXISTS songs (
 	id SERIAL PRIMARY KEY,
 	artist_id INT,
 	title VARCHAR(200) NOT NULL,
@@ -71,7 +71,6 @@ CREATE TABLE members (
  * Double quotes for schema, single quotes for data.
  */
 
-
 /* Below we are inserting data into our tables. Everything above this point is DDL, defining tables,
  * constraints, and relations. The INSERT statements below are DML, Data Manipulation Language. DDL
  * defines schema. Now we use DML to manipulate data.
@@ -84,8 +83,9 @@ INSERT INTO artists (artist) VALUES ('Tool');
 
 INSERT INTO songs (artist_id, title, album) VALUES (4, 'Stupify', 'The Sickness');
 INSERT INTO songs (artist_id, title, album) VALUES (4, '10,000 Fists', 'AlbumName');
-INSERT INTO songs (artist_id, title, album) VALUES (3, 'Breakup Song', 'The Great Breakup Album');
-INSERT INTO songs (title, album, year) VALUES ('Kashmir', 'Physical Grafitti', '1978');
+INSERT INTO songs (artist_id, title, album) VALUES (3, 'Love Story', 'Fearless');
+INSERT INTO songs (artist_id, title, album) VALUES (1, 'Kashmir', 'Physical Grafitti');
+INSERT INTO songs (artist_id, title, album) VALUES (1, 'D''yer Mak''er', 'Houses of the Holy');
 
 INSERT INTO members (artist_id, "member") VALUES (1, 'Jimmy Page');
 INSERT INTO members (artist_id, "member") VALUES (1, 'Robert Plant');
@@ -245,10 +245,6 @@ AND S.student_name != 'Bilbo';
  */
 
 
-
-
-
-
 DROP TABLE IF EXISTS employees;
 CREATE TABLE employees (
 	id SERIAL PRIMARY KEY,
@@ -278,3 +274,65 @@ GROUP BY manager
 HAVING COUNT(*) > 1
 
 
+
+
+
+/* SQL Views
+ * 
+ */
+CREATE VIEW rich_people AS
+SELECT * FROM employees 
+WHERE salary > 200000;
+
+INSERT INTO employees (first_name, last_name, salary, manager) VALUES ('Sam', 'Smith', '280000.00', 'Andrew Crewelge');
+
+SELECT * FROM rich_people
+
+
+
+
+
+
+
+
+/* Set Operations
+ * 
+ */
+DROP TABLE IF EXISTS top_rated_films;
+CREATE TABLE top_rated_films (
+	film_id SERIAL,
+	title VARCHAR(200),
+	"year" VARCHAR(4),
+	CONSTRAINT pk_top_rated_films PRIMARY KEY (film_id)
+);
+
+INSERT INTO top_rated_films (title, "year") VALUES ('The Shawshank Redemption', 1994);
+INSERT INTO top_rated_films (title, "year") VALUES ('The Godfather', 1972);
+INSERT INTO top_rated_films (title, "year") VALUES ('12 Angry Men', 1957);
+
+DROP TABLE IF EXISTS most_popular_films;
+CREATE TABLE most_popular_films (
+	film_id SERIAL PRIMARY KEY,
+	title VARCHAR(200),
+	"year" VARCHAR(4)
+);
+
+INSERT INTO most_popular_films (title, "year") VALUES ('An American Pickle', 2020);
+INSERT INTO most_popular_films (title, "year") VALUES ('The Godfather', 1972);
+INSERT INTO most_popular_films (title, "year") VALUES ('Greyhound', 2020);
+
+
+/* INTERSECT
+ * 
+ */
+SELECT * FROM top_rated_films 
+INTERSECT
+SELECT * FROM most_popular_films
+
+
+/* Union
+ * 
+ */
+SELECT * FROM top_rated_films 
+UNION
+SELECT * FROM most_popular_films
