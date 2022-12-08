@@ -7,7 +7,7 @@ Welcome to Revature! Over the course of this curriculum we will prepare you to b
  - [Roadmap](./roadmap.md)
  - [Environment](./environment.md)
  - [Revature Training & Curriculum](./notes/misc/revature-training.md)
- - [Labs](./labs/README.md)
+ - [Labs](./labs/)
  - [Code Demos](./demos/README.md)
  - [Self Study Topics](./self-study.md)
 
