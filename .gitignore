@@ -4,3 +4,4 @@ target/
 *.iml
 *.properties
 node_modules/
+dist/
