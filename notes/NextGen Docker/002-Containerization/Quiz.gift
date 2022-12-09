@@ -1,0 +1,18 @@
+::Docker Concepts::
+1.The container uses the resources of ________________.
+{
+    ~ hard disk
+    ~ processor
+    = operating system
+    ~ none of the above 
+}
+
+2. A container requires more boot time. {F}
+
+3.A container is like a _____________ virtual machine.
+{
+= lightweight
+~ heavyweight
+~ complex
+~ none of the above
+}

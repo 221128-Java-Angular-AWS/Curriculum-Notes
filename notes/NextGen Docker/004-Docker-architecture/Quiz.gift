@@ -1,0 +1,25 @@
+::Docker architecture::
+1.	Which of the following manages the container? {
+    = Docker Daemon
+    ~ Docker Registry
+    ~ Docker Networking
+    ~ Docker Client
+}
+
+2. Which of the following is used to interact between the user and the Docker platform?
+{
+    ~ Docker Daemon
+    ~ Docker Registry
+    ~ Docker Networking
+    = Docker CLI
+}
+
+3.	Which of the following is the cloud storage for Docker Images?
+{
+    ~ Docker Daemon
+    = Docker Registry
+    ~ Docker Networking
+    ~ Docker Client
+}
+
+4.	A container is a software unit that contains applications and their dependencies as a package. {T}

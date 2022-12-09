@@ -1,0 +1,28 @@
+::Contains vs VMs::
+1.A container is a software unit that contains ___________.
+{
+    ~ ports and networks
+    ~ environment variables
+    ~ memory and storage
+    = software and dependencies
+}
+
+2.A virtual machine is a virtual environment that has its own ____________.
+{
+    ~ virtual hardware
+    ~ operating system
+    ~ memory and storage
+    = All of the above
+}
+
+3. A computer can contain only one virtual machine or container.{F}
+
+4. Which of the following is software used to create and manage virtual machines?
+{
+~ Supervisor
+= Hypervisor
+~ Maintainer
+~ Manager
+}
+
+5. Container must have a guest operating system. {F}

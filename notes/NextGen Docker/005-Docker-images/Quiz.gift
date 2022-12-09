@@ -1,0 +1,24 @@
+::Docker Images::
+1.Docker Image is a file used to build a Docker_____________.
+{
+    ~ Registry
+    ~ Host
+    ~ Store
+    = Container
+}
+
+2. Which of the following is the image that a user can build from scratch with the build command?
+{
+    = Base image
+    ~ Parent image
+    ~ Layers
+    ~ Container layer
+}
+
+3.Docker images are in the form of ____________.
+{
+    ~ tables
+    ~ container
+    = layers
+    ~ files
+}

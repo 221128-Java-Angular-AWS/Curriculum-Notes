@@ -1,0 +1,8 @@
+1) Should the dependencies of a docker file be limited or not?
+a) True
+b) False
+
+2) What is the current working directory when you issue a docker build command?
+a) Ephemeral box
+b) Build context
+c) CLI unit
