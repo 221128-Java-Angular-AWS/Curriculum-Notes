@@ -76,7 +76,7 @@ The database URL is an address pointing to the database to be used, also known a
 | MySQL | `com.mysql.jdbc.Driver` | jdbc:mysql://hostname/databaseName |
 | Oracle | `oracle.jdbc.driver.OracleDriver` | jdbc:oracle:thin:@hostname:portNumber:databaseName |
 | SQLServer | `com.microsoft.sqlserver.jdbc.SQLServerDriver` | jdbc:sqlserver://serverName:portNumber;property=value |
-| PostgreSQL | `org.postgresql.Driver` | jdbc:postgresql://hostname:port/databaseName |
+| PostgreSQL | `org.postgresql.Driver` | jdbc:postgresql://hostname:port/databaseName?user=username&password=password |
 
 ### Executing SQL
 Once we have the `Connection` object, we can write our SQL and execute it:
