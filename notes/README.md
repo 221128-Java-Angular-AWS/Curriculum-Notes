@@ -155,6 +155,7 @@ Git, Linux, OOP, Intro to Java
    - [Docker Containers](./devops/docker-containers.md)
    - [Docker Workflow](./devops/docker-workflow.md)
    - [Docker Cheatsheet](./devops/docker-cheatsheet.md)
+ - [NextGen Docker Notes (Rough Draft)](./NextGen%20Docker)
 
 
 ## Amazon Web Services
