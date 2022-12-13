@@ -5,6 +5,9 @@ These files are full of questions you are likely to be asked as part of QC. You 
 ### Current topics
 - [SQL](./qc-sql.md)
 - [Docker](./qc-docker.md)
+- [HTTP](./qc-http.md)
+- [REST](./qc-rest.md)
+- [Servlets](./qc-servlets.md)
 
 ### Backend:
  - [OOP](./oop.md)
