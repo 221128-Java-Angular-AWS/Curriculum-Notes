@@ -19,7 +19,7 @@ This is a servlet class. Servlets contain a number of methods to handle differen
 to a specific endpoint (representing a specific resource). In this case, any requests sent to the "/demo" endpoint.
 That means that the URL to access this resource would look something like this:
     www.host.com/contextpath/demo/
-    
+
  */
 public class DemoServlet extends HttpServlet {
 
