@@ -1,5 +1,11 @@
 package com.revature.TDD;
 
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 /*
     The 3 A's of unit testing:
      - Arrange - set up the parameters for valid testing
@@ -14,10 +20,9 @@ package com.revature.TDD;
      @BeforeAll
  */
 
-import org.junit.jupiter.api.*;
 
+@ExtendWith(MockitoExtension.class)
 public class CalculatorTest {
-
 
     public Calculator sut;
 
@@ -32,8 +37,9 @@ public class CalculatorTest {
     }
 
     @BeforeEach
-    public void beforeEach() {
-        sut = new Calculator();
+    public void beforeEach(@Mock OtherClass otherClass) {
+        sut = new Calculator(otherClass);
+        Mockito.when(otherClass.testMethod(Mockito.<String>any())).thenReturn("String");
     }
 
     @AfterEach
@@ -62,6 +68,21 @@ public class CalculatorTest {
         test bad data
 
          */
+    }
+
+    @Test
+    public void testSubtractionWithGoodParametersMockingOtherClass() {
+        //arrange
+        int a = 5;
+        int b = 1;
+        int expectedResult = 4;
+
+        //act
+        int actualResult = sut.subtract(a, b);
+
+        //assert
+        Assertions.assertEquals(expectedResult, actualResult);
+
     }
 
 }
