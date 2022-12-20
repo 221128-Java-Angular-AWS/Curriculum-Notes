@@ -1,0 +1,11 @@
+#h1 {
+    font-family: Arial;
+    font-style: italic;
+    color: green;
+}
+
+.clazz {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    color: blue;
+}
