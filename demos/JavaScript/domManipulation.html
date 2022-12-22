@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+
+<body>
+    <ul id="animals">
+    </ul>
+
+    <script>
+        function createAnimalList(name) {
+            let li = document.createElement('li');
+            li.textContent = name;
+            return li;
+        }
+        // get the ul #animals
+        const list = document.querySelector('#animals');
+        // add animals to the list
+        list.appendChild(createAnimalList('Lion'));
+        list.appendChild(createAnimalList('Tiger'));
+        list.appendChild(createAnimalList('Wolf'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopes</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    
+    /*
+    Originally JS had Global, and Local scope. (back then local scope referred to funcitons)
+    and only had one keyword for declaring variables, "var". In ES6 "let", and "const" were introduced
+    which adhere to new scoping rules. Var still plays by its own older rules.
+
+    Now JS has Global, Function, and Block scope. What used to be local scope is now called function scope.
+    Global is anywhere outside a function or block. This comment is written in the global scope.
+    Function is inside of a function definition.
+    Block is inside a non-funciton code block, like that of a switch statement or for loop. We can
+    also just open a block of code for no reason, { like this }. This is block scope.
+
+    Let and const are block scoped, they were introduced along with the new block scope. Var still
+    behaves the way it always did, and so block scoping is not a concern. Var is also hoisted,
+    which was an awful feature. Let and const are not hoisted. Kyle's advice to you is to forget
+    about var and only use let and const.
+    */
+
+    //c, defined with "var" gets hoisted up to the top of its scope, to here the top of global.
+    //global scope
+    let a = 1;
+    const b = 2;
+    var c = 3;
+
+    //function scope
+    (function func() {
+        //variables defined with "var" i and f are both hoisted up to here. This is the top of their scope.
+        //var is scoped with the old scoping rules, so block scope did not exist yet.
+        let d = 4;
+        const e = 5;
+        var f = 6;
+
+        console.log("function scope a,b,c,d,e,f,... i: ", a, b, c, d, e, f, i);
+        //a b c d e f and i are all in scope here. i thanks to hoisting with var.
+
+        //block scope nested within funciton scope
+        if (true) {
+            let g = 7;
+            const h = 8;
+            var i = 9;
+            console.log("block scope a,b,c,d,e,f,g,h,i: ", a, b, c, d, e, f, g, h, i);
+        }
+
+        console.log("after block scope a,b,c,d,e,f,i: ", a, b, c, d, e, f, i);
+
+
+    })();//IIFE - imediately invoked function expression - AKA a self-invoking funciton.
+    //As soon as this is defined, it is called, or invoked.
+
+
+    console.log("after function scope a,b,c: ", a, b, c);
+
+
+
+
+    //Lexical scope - isn't really a scope. This is a concept that has to do with 
+    //something called "closure".
+
+
+    function greeting() {
+        let message = 'Hi';
+
+        function sayHi() {
+            console.log(message);
+            /*
+            message was in scope here, so the value of message remains accessable to this function
+            even after the outer funciton ceases to exist. It is Lexically bound to the inner funcion 
+            scope.
+            */
+        }
+
+        return sayHi;
+    }
+    let hi = greeting();
+    
+    //prints "Hi" in the console, even though the variable containing the string "Hi" is no longer in scope.
+    hi();
+
+
+    var hoistMe = 9; //this variable is hoisted to the top of its scope, to the top of this script.
+    // While the value 9 is not assigned to it until we get here, the variable 'hoistMe' 
+    //if referenced will not cause an error, it will just be undefined. 
+    //This is hoisting, and it is awful. Just forget this is a thing you can do.
+    
+
+</script>
+
+</html>

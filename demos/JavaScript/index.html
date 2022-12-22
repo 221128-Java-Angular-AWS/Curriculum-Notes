@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Demos</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // These comments are the same as Java
+    /*
+    Below we have the variable keywords var, let, and const.
+    Var was in the earliest versions of javascript. Let and const were introduced later
+    in ES6 when the scoping rules changed.
+
+    Var gets hoisted, that is it can be used before it is declared. This is a very dumb thing JS did,
+    and they dropped this behavior when let and const were introduced. Var still hoists, let and const
+    do not. Var is still scoped in the same way. Let and const use the new scoping rules.
+    */
+
+
+    var x = 5;
+
+    const y = 5;
+    console.log('const value y: ', y);
+
+    let z = 'hello, world!';
+
+
+    /*
+    quoting strings:
+    */
+    let str1 = 'this is a string quoted with single quotes.';
+    let str2 = "this is a string quoted with double quotes.";
+    let str3 = `this is a string quoted with backticks`;
+    //backtick strings behave a little bit differently, these can be template literals. 
+    //We'll discuss those at another time.
+
+
+
+    /*
+    JS has all the same flow control statements as c, c++, and Java. for loop, while loop, 
+    do-while loop, if-then-else, switch... JS also has an equivelant of the enhanced for loop.
+    JS actually has 2 enhanced for loops, for-in and for-of. 
+
+    For-in iterates through the keys (property names) of an object, and we can de-reference an object
+    sort of like an array, by putting the key name inside [square brackets]. See below example.
+    */
+    for (let key in obj) {
+        console.log(key, ": ", obj[key]);
+    }
+
+
+    /*
+    Type coercion - JS has a concept called coercion, where for the purposes of certain statements
+    values are temporarily "coerced" or converted into another type. For instance, if we wanted to check
+    to see if the numeric value 5 is equivalent  to the string "5". Of course these two things are not
+    equal, one is a string and one is a number. But, they might be equivalent. These are different
+    representations of the same value. So if we convert "5" -> 5 or 5 -> "5" we can compare the two:
+    "5" == "5" is true
+    5 == 5 is true.
+    "5" == 5 is true.
+    5 == "5" is true.
+    This is type coercion. 
+
+    Type coercion leads is to another JS concept, truthy and falsy. The predicate results of true and false
+    are boolean data type. if statements as well as loops and many other things will need to check
+    if some predicate is true. But even when dealing with something that is neither true nor false,
+    like the number 5, we can coerce a true or false value out of these. The rules for this conversion
+    are "truthy" and "falsy". There are 6 things which are considered "falsy" which means they will
+    be coerced into the boolean type with a value of false. Everything else is "truthy".
+
+    The 6 falsy values are:
+    boolean false - false
+    empty string - ""
+    undefined variable - let x;
+    null variables - x = null;
+    NaN - (10/0) - (10/0) = NaN
+    numerical zero - 0
+
+    These 6 thigs when checked for a predicate value, like in an if statement, will resolve to 
+    false. All other values will resolve to true.
+
+    */
+
+    if (5) {
+        console.log("5 is truthy!")
+    }
+
+    if (0) {
+        console.log("0 is not truthy!");
+    } else {
+        console.log("0 is falsy.");
+    }
+
+
+    if ((10 / 0)) {//10/0 = infinity. 
+        console.log("infinity is truthy!")
+    }
+
+    if ((10 / 0) - (10 / 0)) {//10/0 = infinity; infinity - infinity = NaN
+        console.log("NaN is not truthy...");
+    } else {
+        console.log("NaN is falsy!");
+    }
+
+    let un;
+    let nu = null;
+    if ("" || un || nu) {// empty string, undefined, null - all are falsy. || is logical OR
+        console.log("These are not truthy");
+    } else {
+        console.log("The empty string, undefined variables, and null references are all falsy.");
+    }
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions and Objects</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+    There are several ways to define a function in JS. We have regular funcitons, anonymous funcitons,
+    arrow functions (anonymous ad-hoc functions), and even IIFE - imediately invoked function expression
+    */
+
+
+    //a normal funciton expression, this funciton can be invoked by name "myFunction()"
+    function myFunction() {
+        console.log("This is myFunction()");
+    }
+
+    myFunction();
+
+
+    /*
+    This is an anonymous funciton. It doesn't have a name. We assign it into a variable
+    called fun, but that isn't the function's name. We invoke this by applying a parameter
+    list to the variable name fun();
+    */
+    let fun = function () {
+        console.log("This is fun()");
+    }
+
+    fun();
+
+
+    /*
+    Here we have another anonymous funciton, but this one is written with arrow syntax.
+    This is the same as lambda function expression in Java, except the arrow is written 
+    as => instead of ->.
+
+    This is an anonymous ad-hoc function. ad-hoc basically means "on demand" or "when needed".
+    This is commonly how we would write a callback function. Think of Javalin in Java, when we 
+    define the callback functions for our endpoints.
+    app.get("/endpoint", () -> {System.out.println("something")})
+
+    In the below example we are again assigning the anonymous funciton to a variable so we can call it.
+    But, that is not the function's name. It doesn't have one.
+    */
+    let fun2 = () => {
+        console.log("This is fun2()");
+    }
+
+    fun2();
+
+    /*
+    This is IIFE - imediately invoked funciton expression. This is a way of writing a function
+    which is imediately resolved and invoked. The funciton definition is inside (parenthesis)
+    which tells the interpreter that this definition should resolve first. When it resovles, it
+    is a function which can be called. Right after this, the very next syntax is a parameter list,
+    which is exactly the syntax which invokes a function.
+    */
+    (function() {
+        console.log("This is an IIFE - a self-invoking function");
+    })();
+
+    //The above is the same as:
+    let fun3 = function() {
+        console.log("This is not an IIFE");
+    };fun3();
+
+
+
+
+        /*
+    Below we create an object, note that we don't have to define a class. This is how we write
+    basic objects in JS. This is where JSON comes from. JSON is "JavaScript Object Notation", we use
+    (almost) the same syntax to define objects in JS as we do to define JSON objects.
+
+    Objects are a variable type, and can be assigned into any variable just like any other
+    data type in JS. Below we define an object and assign it into the variable "obj".
+    */
+
+    let obj = {
+        key1: 'value',
+        key2: 'value2',
+        string: 'hello, world!',
+        num: 5,
+        pi: 3.14159,
+        sumFunc: (a, b) => { return a + b; }
+
+    }
+
+    /*
+    These objects have properties. Above, key1, key2, string, num, pi, and sumFunc are all properties
+    of the object. The first 5 are all variables just like we see declared with var, let and const. 
+    However, var let and const are not valid in an object. You simply declare the name of the 
+    property and assign it some value. Likewise, we do not use the '=' operator for assignment. 
+    We write the property name and a ':' colon, then the value.
+
+    Functions are just variables like anything else. In the above object we assigned a function
+    to the property 'sumFunc'. We can de-reference our object with the '.' dot operator
+    and call sumFunc() just like we would in Java.
+    */
+
+    console.log("sumFunc 5 + 10 = ", obj.sumFunc(5, 10));
+    obj.key1 = 'this is a different value';
+    console.log('This is undefined: ', hoistMe)
+    console.log("obj.value = ", obj.key)
+
+    let obj1 = {
+        firstName: 'Kyle',
+        lastName: 'Plummer',
+        fullName: function () {
+            return firstName + " " + lastName
+        }
+    }
+
+    //do fact finding, you'll be surprised what you learn...
+    console.log("Object1: ", obj1);
+
+
+
+
+
+</script>
+
+</html>

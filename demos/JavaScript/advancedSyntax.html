@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Syntax</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //plain old object syntax
+    let obj = {
+        property1: "string",
+        property2: "hello world!"
+    }
+
+    obj.property3 = "This property didn't exist";
+    console.log("Does this exist? ", obj.property3, obj);
+
+    //but now we have class syntax
+    class Animal {
+        static count = 0;
+
+        constructor(name) {
+            Animal.count++;
+            this.name = name;
+        }
+
+        static countAnimals() {
+            console.log(Animal.count);
+        }
+
+        speak() {
+            console.log(`My name is: ` + this.name);
+        }
+    }
+
+    let animal = new Animal("Joey");
+    animal.speak();
+
+    console.log(animal, Animal);
+
+
+</script>
+
+</html>

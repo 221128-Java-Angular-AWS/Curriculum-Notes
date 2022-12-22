@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+</head>
+
+<body>
+    <button id="button" , onclick="asyncFunc()">click!</button>
+</body>
+<script>
+
+    let baseURL = "http://localhost:8080";
+    let newTask = {
+        "title": "Take car for oil change",
+        "description": "bring the car to jiffylube to get the opil changed becuase you have owned this car all year and haven't changed the oil.",
+        "completed": false,
+        "userId": 1
+    };
+
+    async function asyncFunc() {
+        console.log("asyncFunc begin...");
+        let response = await fetch(baseURL + "/task", {
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newTask),
+            method: 'POST'
+
+        });
+        console.log("response: ", response);
+        let text = await response.text(); // response body consumed
+        document.write(text);
+    }
+
+    //asyncFunc();
+</script>
+
+</html>

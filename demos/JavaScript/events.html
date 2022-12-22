@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <div id="firstDiv">
+        <p id="firstP">This is a demonstration of events in JS</p>
+        <div id="secondDiv">
+            <form id="form">
+                <label id="label">Input text below:</label>
+                <input id="textInput" type="text">
+                <input id="button" type="button">
+            </form>
+            <p id="secondP">This is the second paragraph, click on me!</p>
+        </div>
+
+    </div>
+
+    <script>
+
+        console.log(document.getElementById("secondP"));
+
+
+        document.getElementById("firstDiv").addEventListener("click", eventFunction);
+        document.getElementById("firstP").addEventListener("click", eventFunction);
+        document.getElementById("secondDiv").addEventListener("click", eventFunction);
+        document.getElementById("label").addEventListener("click", eventFunction);
+        document.getElementById("textInput").addEventListener("click", eventFunction);
+        document.getElementById("button").addEventListener("click", eventFunction);
+        document.getElementById("secondP").addEventListener("click", eventFunction);
+
+        function eventFunction() {
+            document.getElementById("secondP").innerHTML += "clicked!";
+            console.log("Event occurred!");
+        }
+    </script>
+</body>
+
+
+</html>
