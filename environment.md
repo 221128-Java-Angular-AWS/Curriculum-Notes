@@ -19,6 +19,6 @@ Below are the applications we will be using in this course. These are all availa
  - [VSCode](https://code.visualstudio.com/download) - Text editor with extensions
  - [DBeaver](https://dbeaver.io/download/) - SQL database administration suite
  - [Postman](https://www.postman.com/downloads/) - API design/testing tool
- - [NodeJS](https://nodejs.org/en/download/)
+ - [NodeJS](https://nodejs.org/en/download/) (includes npm)
    - typescript: `npm install -g typescript`
    - angular: `npm install -g @angular/cli`
