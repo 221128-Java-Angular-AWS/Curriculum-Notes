@@ -20,3 +20,5 @@ Below are the applications we will be using in this course. These are all availa
  - [DBeaver](https://dbeaver.io/download/) - SQL database administration suite
  - [Postman](https://www.postman.com/downloads/) - API design/testing tool
  - [NodeJS](https://nodejs.org/en/download/)
+   - typescript: `npm install -g typescript`
+   - angular: `npm install -g @angular/cli`
