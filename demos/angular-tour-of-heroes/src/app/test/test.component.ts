@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent {
-
+  constructor() {
+    this.num = 0;
+  }
+  num: number;
 }
