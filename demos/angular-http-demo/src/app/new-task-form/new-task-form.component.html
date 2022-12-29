@@ -1,0 +1,16 @@
+<h1>New Task</h1>
+<br>
+Enter user ID:
+<input type="number" name="userId" [(ngModel)]="userId">
+<br>
+Enter title:
+<br>
+<input type="text" name="title" [(ngModel)]="title">
+<br>
+Enter description:
+<br>
+<textarea name="description" [(ngModel)]="description"></textarea>
+<br>
+<input type="checkbox" name="completed" [(ngModel)]="completed">
+<br>
+<button (click)="post()">POST!</button>

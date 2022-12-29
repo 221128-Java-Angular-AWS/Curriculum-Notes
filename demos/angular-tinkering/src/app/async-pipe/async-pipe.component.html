@@ -1,0 +1,5 @@
+<div>
+    <h3> Async Pipes for Promise</h3>
+    <button (click)="clicked()">{{ arrived ? 'Reset' : 'Resolve' }}</button>
+    <p>Wait for it... {{ logMessage | async }}</p>
+</div>

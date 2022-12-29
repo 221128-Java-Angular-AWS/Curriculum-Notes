@@ -1,0 +1,8 @@
+<input type="number" [(ngModel)]="userId">
+<button (click)="doGetRequest()">Get Tasks for user: {{userId}}</button>
+
+<ul *ngFor="let task of tasks;">
+    <li>{{task.title | uppercase}}</li>
+    <li>{{task.description}}</li>
+    <li>{{task.completed}}</li>
+</ul>
