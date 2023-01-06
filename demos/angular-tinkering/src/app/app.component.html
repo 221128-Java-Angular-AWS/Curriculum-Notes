@@ -1,6 +1,9 @@
-<h2>Event Emitters</h2>
-<p> At AppComponent, count = {{ count }} </p>
-<app-child [count]='count' (change)='countChange($event)'></app-child>
-<hr>
-<h3>Async pipe:</h3>
-<app-async-pipe></app-async-pipe>
+<div class="content">
+    <span>{{ title }} app is running!</span>
+    <h2>Event Emitters</h2>
+    <p> At AppComponent, count = {{ count }} </p>
+    <app-child [count]='count' (change)='countChange($event)'></app-child>
+    <hr>
+    <h3>Async pipe:</h3>
+    <app-async-pipe></app-async-pipe>
+</div>

@@ -8,6 +8,7 @@ import { HttpClientModule  } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RemoteService } from './remote.service';
 
 
 @NgModule({
